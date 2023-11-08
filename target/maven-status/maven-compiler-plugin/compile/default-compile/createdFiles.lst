@@ -1,0 +1,12 @@
+com\example\TechnicalAssesment\Services\MatchService.class
+com\example\TechnicalAssesment\Controllers\MatchOddsController.class
+com\example\TechnicalAssesment\Services\MatchOddsService.class
+com\example\TechnicalAssesment\Repositories\MatchRepository.class
+com\example\TechnicalAssesment\Entities\Match.class
+com\example\TechnicalAssesment\Services\MatchServiceImpl.class
+com\example\TechnicalAssesment\Entities\MatchOdds.class
+com\example\TechnicalAssesment\TechnicalAssesmentApplication.class
+com\example\TechnicalAssesment\Repositories\MatchOddsRepository.class
+com\example\TechnicalAssesment\Services\MatchOddsServiceImpl.class
+com\example\TechnicalAssesment\Enums\Sports.class
+com\example\TechnicalAssesment\Controllers\MatchController.class

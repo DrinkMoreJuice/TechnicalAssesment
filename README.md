@@ -124,4 +124,4 @@ Tests for Match Service use cases.
 
 # Contact info:
 
-k.kontogeorgo@gmail.com"# TechnicalAssesment" 
+k.kontogeorgo@gmail.com

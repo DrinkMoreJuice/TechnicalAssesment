@@ -1,0 +1,32 @@
+version: '3'
+services:
+  spring-app:
+    image: openjdk:17-jdk-slim
+    container_name: spring-app-container
+    working_dir: /app
+    volumes:
+      - ./target/technicalAssesment.jar:/app/app.jar
+      - ./sql:/docker-entrypoint-initdb.d
+    ports:
+      - "8080:8080"
+    command: ["java", "-jar", "app.jar"]
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres-container
+    environment:
+      POSTGRES_DB: AssesmentDB
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

@@ -56,6 +56,7 @@ public class MatchServiceImpl implements MatchService {
 		Match existingMatch = matchRepository.findById(id).orElse(null);
 		if (existingMatch != null) {
 			updateTheMatch(existingMatch,updatedMatch);
+			matchRepository.save(existingMatch);
 			return existingMatch;
 		}
 		// Return null if match with id doesn't exist

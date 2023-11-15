@@ -52,6 +52,7 @@ public class MatchOddsServiceImpl implements MatchOddsService {
         MatchOdds existingMatchOdds = matchOddsRepository.findById(id).orElse(null);
         if (existingMatchOdds != null) {
         	updateTheMatchOdds(existingMatchOdds, updatedMatchOdds);
+        	matchOddsRepository.save(existingMatchOdds);
         	return existingMatchOdds;
         }
      // Return null if MatchOdds with id doesn't exist
